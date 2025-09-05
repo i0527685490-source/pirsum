@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרסומת מחשבים</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background: #e3f2fd;
+        overflow-x: hidden;
+    }
+
+    .ad-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        min-height: 100vh;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .ad-box {
+        background: #ffffff;
+        padding: 1.5rem 2rem;
+        margin: 1rem 0;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        width: 90%;
+        max-width: 800px;
+        text-align: center;
+        animation: floatUp 8s ease-in-out infinite alternate, colorShiftBox 12s ease-in-out infinite alternate;
+        position: relative;
+    }
+
+    h1 {
+        color: #0d47a1;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        animation: colorShift 12s ease-in-out infinite alternate;
+    }
+
+    p {
+        color: #1976d2;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        animation: colorShiftReverse 12s ease-in-out infinite alternate;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #0d47a1;
+        animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); color: #0d47a1; }
+        50% { transform: scale(1.1); color: #42a5f5; }
+        100% { transform: scale(1); color: #0d47a1; }
+    }
+
+    @keyframes colorShiftBox {
+        0% { background: #ffffff; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        50% { background: #f0f7ff; box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
+        100% { background: #ffffff; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    }
+
+    @keyframes colorShift {
+        0% { color: #0d47a1; }
+        50% { color: #42a5f5; }
+        100% { color: #0d47a1; }
+    }
+
+    @keyframes colorShiftReverse {
+        0% { color: #1976d2; }
+        50% { color: #64b5f6; }
+        100% { color: #1976d2; }
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(33, 150, 243, 0.1);
+        animation: moveCircle linear infinite;
+    }
+
+    .circle:nth-child(1) { width: 100px; height: 100px; top: 10%; left: 5%; animation-duration: 40s; }
+    .circle:nth-child(2) { width: 150px; height: 150px; top: 70%; left: 80%; animation-duration: 50s; }
+    .circle:nth-child(3) { width: 60px; height: 60px; top: 40%; left: 50%; animation-duration: 36s; }
+    .circle:nth-child(4) { width: 80px; height: 80px; top: 30%; left: 30%; animation-duration: 44s; }
+
+    @keyframes moveCircle {
+        0% { transform: translateY(0) translateX(0); }
+        50% { transform: translateY(-50px) translateX(30px); }
+        100% { transform: translateY(0) translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+        h1 { font-size: 1.5rem; }
+        p { font-size: 1rem; }
+    }
+</style>
+</head>
+<body>
+    <div class="ad-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+
+        <div class="ad-box">
+            <h1>הכי משתלם, הכי זול.</h1>
+            <p>מחשבים ניידים מהסדרות המובילות, <span class="highlight">מוחדשים</span>, במחיר נמוך בפער.</p>
+        </div>
+
+        <div class="ad-box">
+            <p>צרו קשר עכשיו וקבלו הצעה אישית משתלמת, או עברו לקטגוריית מחשבים וחפשו את המחשבים שמסומנים כ<span class="highlight">מוחדשים</span>.</p>
+        </div>
+    </div>
+</body>
+</html>
